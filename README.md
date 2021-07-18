@@ -7,6 +7,6 @@ My coursework about landing page using [![HTML](https://img.shields.io/badge/htm
 and [![ThreeJS](https://img.shields.io/badge/threejs-0.85-green)](https://img.shields.io/badge/threejs-0.85-green)
 .
 <br>
-Created for the purposes of Computer Graphics course assignments
+Created for the purposes of Computer Graphics course assignments.
 <br>
 Website preview is coming soon in Netlify!
