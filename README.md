@@ -2,7 +2,6 @@
 
 > _"3D is the way we experience life"_
 > - _Alejandro González Iñárritu, Mexican Director_
-<br>
 
 ## Description
 My coursework about landing page using [![HTML](https://img.shields.io/badge/html-%205%20%20%20-red)](https://img.shields.io/badge/html-%205%20%20%20-red) ,
@@ -18,7 +17,6 @@ Created for the purposes of Computer Graphics course assignments.
 Website preview on Netlify:
 <br>
 https://dendykrisna-landingpage.netlify.app/
-<br>
 ## Notes
 <br>
 Pada Netlify, objek 3D dorayaki tidak muncul. Namun sebenarnya objek dorayakinya akan muncul hanya saja membutuhkan sedikit waktu untuk meload objek.
