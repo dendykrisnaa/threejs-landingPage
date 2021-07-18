@@ -17,14 +17,9 @@ Created for the purposes of Computer Graphics course assignments.
 Website preview on Netlify:
 <br>
 https://dendykrisna-landingpage.netlify.app/
-Website preview on Netlify:
 <br>
 <br>
-## Screenshoots
-
-<br>
-<br>
-## Issue
+## Notes
 <br>
 Pada Netlify, objek 3D dorayaki tidak muncul. Namun sebenarnya objek dorayakinya akan muncul hanya saja membutuhkan sedikit waktu untuk meload objek.
 <br>
