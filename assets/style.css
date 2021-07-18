@@ -1,0 +1,57 @@
+body{
+    background: #17202A;
+    letter-spacing: 0.5px;
+}
+
+.header_welcome{
+  color:#17A589;
+  text-align: center;
+  margin-top: 80px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 7px;
+}
+
+.subtitle{
+  color: white;
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 10px;
+}
+
+.sosmed{
+display: flex;
+justify-content: center;
+margin: 20px 0;
+}
+
+.sosmed a{
+    color: #f2f2f2;
+    width: 56px;
+    font-size: 22px;
+    transition: .3s linear;
+    text-decoration: none;
+}
+
+.sosmed a:hover{
+    color: #25cf96;
+}
+
+.content_title{
+    color: #17A589;
+    text-align: center;
+    margin-top: 80px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+.portofolio_content_title{
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
