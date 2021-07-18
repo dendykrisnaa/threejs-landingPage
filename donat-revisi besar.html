@@ -47,8 +47,8 @@
     </nav>
 
     <!--welcome-->
-    <h1 id="header_welcome" style="color:#17A589; text-align: center; margin-top: 80px;">Welcome in My Site!</h1>
-    <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
+    <h1 id="header_welcome">Welcome in My Site!</h1>
+    <p id="subtitle">
       Website about my personal profile. Built with HTML, CSS, and Javascript
     </p>
     <!-- kubus di dalam sangkar -->
@@ -56,7 +56,7 @@
   
     <!-- about me -->
     <br id="about-me">
-    <h2 style="color: #17A589; text-align: center; margin-top: 80px;">Tentang Saya</h1>
+    <h2 style="color: #17A589; text-align: center; margin-top: 80px; text-transform: uppercase;">Tentang Saya</h1>
     <br>
     
     <!--grid-->
@@ -117,7 +117,7 @@
 
     <!-- skill saya -->
     <br id="skill_saya">
-    <h1 style="color: #17A589; text-align: center; margin-top: 80px;">Skill dan Hobi Saya</h1>
+    <h1 style="color: #17A589; text-align: center; margin-top: 80px; text-transform: uppercase;">Skill dan Hobi Saya</h1>
     <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
       Keahlian yang saya kuasai serta hal-hal apa yang biasanya saya lakukan di waktu senggang
     </p>
@@ -148,13 +148,13 @@
   
     <!-- portofolio saya -->
     <br id="portofolio_saya">
-    <h1 style="color: #17A589; text-align: center; margin-top: 80px;">Portofolio Saya</h1>
+    <h1 style="color: #17A589; text-align: center; margin-top: 80px; text-transform: uppercase;">Portofolio Saya</h1>
     <br>
     <!---animasi donat (Saya suka donat! Jika modeling donat di Blender sudah mainstream,
       mengapa kita tidak membuat donat yang menggiurkan bertekstur waffle di ThreeJS?)-->
     <script src="assets/donat.js"></script>
   
-    <h2 style="color: white; text-align: center; margin-top: 80px;">3D Model</h2>
+    <h2 style="color: white; text-align: center; margin-top: 80px; text-transform: uppercase;">3D Model</h2>
     <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
       Foto 3D Model makanan sushi dan dorayaki yang saya buat dengan menggunakan Blender 3D beserta 3D preview objek yang saya ekspor ke ThreeJS. 
       Untuk tekstur dan detail objek sengaja saya downgrade agar tidak terlalu berat.
@@ -208,7 +208,7 @@
     </p>
     <script src="assets/palangKereta.js"></script>
   
-    <h2 style="color: white; text-align: center; margin-top: 80px;">Desain Grafis dan Vektor</h2>
+    <h2 style="color: white; text-align: center; margin-top: 80px; text-transform: uppercase;">Desain Grafis dan Vektor</h2>
     <br>
     <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
         Desain logo minuman boba dengan preview kemasan cup.
@@ -258,7 +258,7 @@
     </div>
     <br>
   
-    <h2 style="color: white; text-align: center; margin-top: 80px;">Gambar Digital</h2>
+    <h2 style="color: white; text-align: center; margin-top: 80px; text-transform: uppercase;">Gambar Digital</h2>
     <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
         Lukisan digital yang saya buat dengan aplikasi Ibis Paint X
     </p>
@@ -286,7 +286,7 @@
     </div>
     <br>
   
-    <h2 style="color: white; text-align: center; margin-top: 80px;">Wayang Kertas</h2>
+    <h2 style="color: white; text-align: center; margin-top: 80px; text-transform: uppercase;">Wayang Kertas</h2>
     <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
         Wayang kertas yang saya buat sebagai hobi untuk mengisi waktu luang dan juga sebagai mainan bersama adik
     </p>
@@ -322,7 +322,7 @@
 
     <!-- youtube video -->
     <br  id="yutub">
-    <h1 style="color: #17A589; text-align: center; margin-top: 80px;">Video YouTube Saya</h1>
+    <h1 style="color: #17A589; text-align: center; margin-top: 80px; text-transform: uppercase;">Video YouTube Saya</h1>
     <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
         Beberapa video channel saya yaitu Green Fukurou Channel yang membahas tentang tutorial dan timelapse animasi serta 3D modeling
     </p>
@@ -416,6 +416,21 @@
     /* css internal */
     body{
         background: #17202A;
+    }
+
+    #header_welcome{
+      color:#17A589;
+      text-align: center;
+      margin-top: 80px;
+      text-transform: uppercase;
+    }
+
+    #subtitle{
+      color: white;
+      text-align: center;
+      margin-left: 25%;
+      margin-right: 25%;
+      margin-bottom: 10px;
     }
 
     .sosmed{
