@@ -12,10 +12,17 @@
     <!--fontawesome icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   
-  <!--three js-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js" integrity="sha512-tjnAmVGiveGgWkDgt8h8oqmOl3cnmQkTNUIFK2BjMz0SliBCm9l0ecN1fHiOG2mATHSYm/miXNX6tE0/5uYKMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- CSS Eksternal -->
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!--three js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js" integrity="sha512-tjnAmVGiveGgWkDgt8h8oqmOl3cnmQkTNUIFK2BjMz0SliBCm9l0ecN1fHiOG2mATHSYm/miXNX6tE0/5uYKMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+
 <body>
     <!-- threejs controls -->
     <script src="https://unpkg.com/three@0.85.0/examples/js/Detector.js"></script>
@@ -28,7 +35,7 @@
 <!-- konten -->
 
     <!-- navigation bar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #17202A;">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark animate__animated animate__backInDown" style="background-color: #17202A;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <i class="fas fa-cube" style="color: #17A589; margin-right: 5px;"></i>
@@ -47,8 +54,10 @@
     </nav>
 
     <!--welcome-->
-    <h1 id="header_welcome">Welcome in My Site!</h1>
-    <p id="subtitle">
+    <h1 class="header_welcome animate__animated animate__lightSpeedInLeft animate__delay-2s">
+      Welcome in My Site!
+    </h1>
+    <p class="subtitle animate__animated animate__lightSpeedInRight animate__delay-2s">
       Website about my personal profile. Built with HTML, CSS, and Javascript
     </p>
     <!-- kubus di dalam sangkar -->
@@ -56,7 +65,7 @@
   
     <!-- about me -->
     <br id="about-me">
-    <h2 style="color: #17A589; text-align: center; margin-top: 80px; text-transform: uppercase;">Tentang Saya</h1>
+    <h2 class="content_title">Tentang Saya</h1>
     <br>
     
     <!--grid-->
@@ -117,7 +126,7 @@
 
     <!-- skill saya -->
     <br id="skill_saya">
-    <h1 style="color: #17A589; text-align: center; margin-top: 80px; text-transform: uppercase;">Skill dan Hobi Saya</h1>
+    <h1 class="content_title">Skill dan Hobi Saya</h1>
     <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
       Keahlian yang saya kuasai serta hal-hal apa yang biasanya saya lakukan di waktu senggang
     </p>
@@ -148,26 +157,27 @@
   
     <!-- portofolio saya -->
     <br id="portofolio_saya">
-    <h1 style="color: #17A589; text-align: center; margin-top: 80px; text-transform: uppercase;">Portofolio Saya</h1>
+    <h1 class="content_title">Portofolio Saya</h1>
     <br>
     <!---animasi donat (Saya suka donat! Jika modeling donat di Blender sudah mainstream,
       mengapa kita tidak membuat donat yang menggiurkan bertekstur waffle di ThreeJS?)-->
     <script src="assets/donat.js"></script>
   
-    <h2 style="color: white; text-align: center; margin-top: 80px; text-transform: uppercase;">3D Model</h2>
+    <!-- 3D Model -->
+    <h2 class="portofolio_content_title">3D Model</h2>
     <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
       Foto 3D Model makanan sushi dan dorayaki yang saya buat dengan menggunakan Blender 3D beserta 3D preview objek yang saya ekspor ke ThreeJS. 
       Untuk tekstur dan detail objek sengaja saya downgrade agar tidak terlalu berat.
-  </p>
-  <br>
-  <!--gambar sushi dan dorayaki -->
-  <img src="https://i.postimg.cc/HsC0gxjP/IMG-20210622-060227.jpg" style="width: 370px; height: 270px;" class="mx-auto d-block" alt="...">
-  <!--preview 3d model sushi dan dorayaki-->
-  <br>
-  <p style="color: gray; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
-    Klik dan drag mouse untuk mengubah view tampilan 3D model sushi dan dorayaki. Scroll mouse untuk zoom in dan zoom out
-  </p>
-  <script src="assets/dorayaki.js"></script>
+    </p>
+    <br>
+    <!--gambar sushi dan dorayaki -->
+    <img src="https://i.postimg.cc/HsC0gxjP/IMG-20210622-060227.jpg" style="width: 370px; height: 270px;" class="mx-auto d-block" alt="...">
+    <!--preview 3d model sushi dan dorayaki-->
+    <br>
+    <p style="color: gray; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
+      Klik dan drag mouse untuk mengubah view tampilan 3D model sushi dan dorayaki. Scroll mouse untuk zoom in dan zoom out
+    </p>
+    <script src="assets/dorayaki.js"></script>
 
     <br>
     <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
@@ -208,7 +218,8 @@
     </p>
     <script src="assets/palangKereta.js"></script>
   
-    <h2 style="color: white; text-align: center; margin-top: 80px; text-transform: uppercase;">Desain Grafis dan Vektor</h2>
+    <!-- Desain Grafis dan Vektor -->
+    <h2 class="portofolio_content_title">Desain Grafis dan Vektor</h2>
     <br>
     <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
         Desain logo minuman boba dengan preview kemasan cup.
@@ -258,7 +269,8 @@
     </div>
     <br>
   
-    <h2 style="color: white; text-align: center; margin-top: 80px; text-transform: uppercase;">Gambar Digital</h2>
+    <!-- Gambar Digital -->
+    <h2 class="portofolio_content_title">Gambar Digital</h2>
     <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
         Lukisan digital yang saya buat dengan aplikasi Ibis Paint X
     </p>
@@ -286,7 +298,8 @@
     </div>
     <br>
   
-    <h2 style="color: white; text-align: center; margin-top: 80px; text-transform: uppercase;">Wayang Kertas</h2>
+    <!-- Wayang Kertas -->
+    <h2 class="portofolio_content_title">Wayang Kertas</h2>
     <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
         Wayang kertas yang saya buat sebagai hobi untuk mengisi waktu luang dan juga sebagai mainan bersama adik
     </p>
@@ -322,7 +335,7 @@
 
     <!-- youtube video -->
     <br  id="yutub">
-    <h1 style="color: #17A589; text-align: center; margin-top: 80px; text-transform: uppercase;">Video YouTube Saya</h1>
+    <h1 class="content_title">Video YouTube Saya</h1>
     <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
         Beberapa video channel saya yaitu Green Fukurou Channel yang membahas tentang tutorial dan timelapse animasi serta 3D modeling
     </p>
@@ -411,46 +424,5 @@
         </div>
     </footer>
 </body>
-
-<style>
-    /* css internal */
-    body{
-        background: #17202A;
-    }
-
-    #header_welcome{
-      color:#17A589;
-      text-align: center;
-      margin-top: 80px;
-      text-transform: uppercase;
-    }
-
-    #subtitle{
-      color: white;
-      text-align: center;
-      margin-left: 25%;
-      margin-right: 25%;
-      margin-bottom: 10px;
-    }
-
-    .sosmed{
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-    }
-
-    .sosmed a{
-        color: #f2f2f2;
-        width: 56px;
-        font-size: 22px;
-        transition: .3s linear;
-        text-decoration: none;
-    }
-
-    .sosmed a:hover{
-        color: #25cf96;
-    }
-
-</style>
 
 </html>
