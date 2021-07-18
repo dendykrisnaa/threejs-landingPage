@@ -17,14 +17,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js" integrity="sha512-tjnAmVGiveGgWkDgt8h8oqmOl3cnmQkTNUIFK2BjMz0SliBCm9l0ecN1fHiOG2mATHSYm/miXNX6tE0/5uYKMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-    <!--
-      konsep baru:
-      hosting via netlify, share juga source codenya biar bu ruth bisa melihat source codenya.
-      tak perlu deklarasikan kotak lagi, kecuali memang diperlukan.
-      untuk silinder, mm.. kayaknya memang butuh deklarasi banyak deh. jangan lupa silinder
-      sedotan openended dan material tampak dari 2 sisi (depan belakang/luar dalam)
-      header title dan subtitle dikasih animasi ala yutub darkcode
-    -->
     <!-- threejs controls -->
     <script src="https://unpkg.com/three@0.85.0/examples/js/Detector.js"></script>
     <script src="https://unpkg.com/three@0.85.0/examples/js/libs/stats.min.js"></script>
@@ -38,8 +30,9 @@
     <!-- navigation bar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #17202A;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="color: #17A589;">
-              <strong>Dendy Krisna's Blog</strong>
+            <a class="navbar-brand" href="#">
+              <i class="fas fa-cube" style="color: #17A589; margin-right: 5px;"></i>
+              <strong>Dendy Krisna</strong>'s Blog
             </a>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
@@ -81,6 +74,7 @@
               <a href="https://www.instagram.com/dendykrisnaa/" class="fab fa-instagram"></a>
               <a href="https://www.youtube.com/channel/UCBI2GMdf-G3Bt7jzHdTFdyg" class="fab fa-youtube"></a>
               <a href="https://codepen.io/krisnasatoru_mikami" class="fab fa-codepen"></a>
+              <a href="https://github.com/dendykrisnaa" class="fab fa-github"></a>
             </div>
         </div>
         <div class="col-sm-6">
@@ -165,13 +159,14 @@
       Foto 3D Model makanan sushi dan dorayaki yang saya buat dengan menggunakan Blender 3D beserta 3D preview objek yang saya ekspor ke ThreeJS. 
       Untuk tekstur dan detail objek sengaja saya downgrade agar tidak terlalu berat.
   </p>
-  <p style="color: gray; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
-      Klik dan drag mouse untuk mengubah view tampilan 3D model sushi dan dorayaki. Scroll mouse untuk zoom in dan zoom out
-  </p>
   <br>
   <!--gambar sushi dan dorayaki -->
   <img src="https://i.postimg.cc/HsC0gxjP/IMG-20210622-060227.jpg" style="width: 370px; height: 270px;" class="mx-auto d-block" alt="...">
   <!--preview 3d model sushi dan dorayaki-->
+  <br>
+  <p style="color: gray; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
+    Klik dan drag mouse untuk mengubah view tampilan 3D model sushi dan dorayaki. Scroll mouse untuk zoom in dan zoom out
+  </p>
   <script src="assets/dorayaki.js"></script>
 
     <br>
@@ -218,61 +213,21 @@
     <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
         Desain logo minuman boba dengan preview kemasan cup.
     </p>
-    <p style="color: gray; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
-        Klik dan drag mouse untuk mengubah view tampilan 3D cup minuman boba. Scroll mouse untuk zoom in dan zoom out
-    </p>
     <br>
     <!--gambar de bonang boba nangka-->
     <img src="https://i.postimg.cc/BbGvF7wc/de-bonang-dark.png" style="width: 270px; height: 270px;" class="rounded mx-auto d-block" alt="...">
+    <br>
     <!--preview cup dengan desain kemasan-->
-    <script>
-      const scene3 = new THREE.Scene();
-      const camera3 = new THREE.PerspectiveCamera( 45, width / height, 1, 1000 );
-      scene3.add( camera3 );
-
-      //atur posisi kamera
-      camera3.position.z = 5;
-
-      const renderer3 = new THREE.WebGLRenderer({ alpha: true }); //alpha true = background transparan
-
-      renderer3.setSize(width, height);
-      document.body.appendChild(renderer3.domElement);
-      
-      //deklarasikan light
-      const lampu1_scene3 = new THREE.PointLight(0xffffff, 1);
-      lampu1_scene3.position.set(-2,-10,10);
-      scene3.add(lampu1_scene3);
-
-      const lampu2_scene3 = new THREE.PointLight(0xffffff, 1);
-      lampu2_scene3.position.set(10,3,10);
-      scene3.add(lampu2_scene3);
-
-      const lampu3_scene3 = new THREE.PointLight(0xffffff, 1);
-      lampu3_scene3.position.set(2,1,-10);
-      scene3.add(lampu3_scene3);
-
-      //deklarasikan geometri
-
-      //deklarasikan material
-
-      //deklarasikan mesh/objek
-
-      window.addEventListener('resize', function() {
-          renderer3.setSize(width, height);
-          camera3.aspect = width / height;
-          camera3.updateProjectionMatrix();
-      });
-
-      function update3() {
-          requestAnimationFrame(update3);
-          renderer3.render(scene3, camera3);
-      }
-
-      update3();
-  </script>
+    <p style="color: gray; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
+      Klik dan drag mouse untuk mengubah view tampilan 3D cup minuman boba. Scroll mouse untuk zoom in dan zoom out
+    </p>
+    <br>
+    <script src="assets/boba.js"></script>
+    <br>
     <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
         Karya desain grafis vektor saya lainnya yang saya buat dengan menggunakan aplikasi Inkscape
     </p>
+    <br>
     <!--carousel-->
     <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
