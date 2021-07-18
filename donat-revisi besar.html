@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dendy Krisna Ananda's Blog</title>
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <!--fontawesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  <!--three js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js" integrity="sha512-tjnAmVGiveGgWkDgt8h8oqmOl3cnmQkTNUIFK2BjMz0SliBCm9l0ecN1fHiOG2mATHSYm/miXNX6tE0/5uYKMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <!--
+      konsep baru:
+      hosting via netlify, share juga source codenya biar bu ruth bisa melihat source codenya.
+      tak perlu deklarasikan kotak lagi, kecuali memang diperlukan.
+      untuk silinder, mm.. kayaknya memang butuh deklarasi banyak deh. jangan lupa silinder
+      sedotan openended dan material tampak dari 2 sisi (depan belakang/luar dalam)
+      header title dan subtitle dikasih animasi ala yutub darkcode
+    -->
+    <!-- threejs controls -->
+    <script src="https://unpkg.com/three@0.85.0/examples/js/Detector.js"></script>
+    <script src="https://unpkg.com/three@0.85.0/examples/js/libs/stats.min.js"></script>
+    <script src="https://unpkg.com/three@0.85.0/examples/js/controls/OrbitControls.js"></script>
+
+    <!-- threejs gltfLoader -->
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+
+<!-- konten -->
+
+    <!-- navigation bar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #17202A;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: #17A589;">
+              <strong>Dendy Krisna's Blog</strong>
+            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                <a class="nav-link" aria-current="page" href="#">Beranda</a>
+                <a class="nav-link" href="#about-me">Tentang Saya</a>
+                <a class="nav-link" href="#skill_saya">Skill dan Hobi</a>
+                <a class="nav-link" href="#portofolio_saya">Portofolio</a>
+                <a class="nav-link" href="#yutub">My YouTube Video</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--welcome-->
+    <h1 id="header_welcome" style="color:#17A589; text-align: center; margin-top: 80px;">Welcome in My Site!</h1>
+    <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
+      Website about my personal profile. Built with HTML, CSS, and Javascript
+    </p>
+    <!-- kubus di dalam sangkar -->
+    <script src="assets/sangkar.js"></script>
+  
+    <!-- about me -->
+    <br id="about-me">
+    <h2 style="color: #17A589; text-align: center; margin-top: 80px;">Tentang Saya</h1>
+    <br>
+    
+    <!--grid-->
+    <div class="container">
+      <!--baris 1-->
+      <div class="row">
+        <div class="col-sm-6">
+            <div class="text-center">
+              <img src="https://i.postimg.cc/nhKyzFjk/Foto-ndak-perlu-dibackup-gpp.jpg"
+                   style="width:200px; height:200px; margin-top: 20px;" class="rounded-circle">
+            </div>
+            <div class="sosmed text-center">
+              <a href="https://wa.me/6282334847545" class="fab fa-whatsapp"></a>
+              <a href="https://www.facebook.com/dendykrisna.ananda" class="fab fa-facebook-f"></a>
+              <a href="https://www.instagram.com/dendykrisnaa/" class="fab fa-instagram"></a>
+              <a href="https://www.youtube.com/channel/UCBI2GMdf-G3Bt7jzHdTFdyg" class="fab fa-youtube"></a>
+              <a href="https://codepen.io/krisnasatoru_mikami" class="fab fa-codepen"></a>
+            </div>
+        </div>
+        <div class="col-sm-6">
+          <!--list group-->
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="background-color: #17202A; color: white; border-color: gray;"><b>Nama :</b> Dendy Krisna Ananda</li>
+            <li class="list-group-item" style="background-color: #17202A; color: white; border-color: gray;"><b>Tempat/Tanggal Lahir :</b> Banyuwangi, 1 Mei 2001</li>
+            <li class="list-group-item" style="background-color: #17202A; color: white; border-color: gray;"><b>Kelamin :</b> Laki-laki</li>
+            <li class="list-group-item" style="background-color: #17202A; color: white; border-color: gray;"><b>Status :</b> Mahasiswa</li>
+            <li class="list-group-item" style="background-color: #17202A; color: white; border-color: gray;"><b>Alamat :</b> Dusun Sumberagung RT 02 R2 02 , Desa Karangdoro, Kecamatan Tegalsari, Kabupaten Banyuwangi</li>
+          </ul>
+        </div>
+      </div>
+      <br>
+      
+      <!--baris 2-->
+      <div class="row">
+        <div class="col-sm-6">
+          <p style="color: white; text-align: justify; margin-bottom: 10px;">
+            <b>Halo,</b> perkenalkan nama saya Dendy Krisna Ananda. Saya merupakan mahasiswa aktif Prodi D3 Teknik Informatika Politeknik Negeri Banyuwangi. Saya lahir di Banyuwangi, 1 Mei 2001 dan hingga sekarang tinggal di rumah keluarga di Desa Karangdoro Kecamatan Tegalsari, meski terkadang saya menginap di kos-kosan yang ada di Jajangsurat Rogojampi. Meski saat ini karena kuliah online lebih sering di rumah sih hehehe.
+          </p>
+          <p style="color: white; text-align: justify; margin-bottom: 10px;">
+              Hobi saya adalah desain 3D Modeling dan animasi, terkadang juga menggambar, dan juga menonton anime dan tokusatsu. Saya juga sering membuat wayang dari kertas untuk mainan bersama adik saya hehehe.
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <p style="color: white; text-align: justify; margin-bottom: 10px;">
+            <b>Biasanya</b> saya melakukan 3D modeling dan animasi di Blender, oleh sebab itu ketika pertama kali mencoba ThreeJS, saya sedikit kebingungan. Tapi saya tidak menyerah. Saya ingin memahami ThreeJS minimal basicnya.
+          </p>
+          <p style="color: white; text-align: justify; margin-bottom: 10px;">
+                Untuk pengalaman organisasi, saya pernah mengikuti OSIS dan ekstrakurikuler tari tradisional waktu SMP dan sempat mengikuti festival Paju Gandrung Sewu pada tahun 2013 silam. Di SMA saya mengikuti ekstrakurikuler karawitan atau musik gamelan dan juga teater. Di Poliwangi sendiri saya mengikuti UKM Gema Seni Mahasiswa Politeknik Negeri Banyuwangi (Geniwangi).
+          </p>   
+         </div>
+      </div>
+      
+    </div>
+  
+    <!--Objek monitor komputer yang menampilkan objek 3D di dalamnya-->
+    <script src="assets/komputer_retro.js"></script>
+
+    <!-- skill saya -->
+    <br id="skill_saya">
+    <h1 style="color: #17A589; text-align: center; margin-top: 80px;">Skill dan Hobi Saya</h1>
+    <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
+      Keahlian yang saya kuasai serta hal-hal apa yang biasanya saya lakukan di waktu senggang
+    </p>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <!--list group-->
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="background-color: #17202A; color: white; border-color: gray;"><b>Skill</b></li>
+            <li class="list-group-item" style="background-color: #17202A; color: white; border-color: gray;">3D Modeling dan Animasi dengan Blender</li>
+            <li class="list-group-item" style="background-color: #17202A; color: white; border-color: gray;">Desain Grafis Vektor dengan Inkscape</li>
+            <li class="list-group-item" style="background-color: #17202A; color: white; border-color: gray;">Digital Painting (Menggambar Digital) dengan Ibis Paint X</li>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+          <!--list group-->
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="background-color: #17202A; color: white; border-color: gray;"><b>Hobi</b></li>
+            <li class="list-group-item" style="background-color: #17202A; color: white; border-color: gray;">Membuat Wayang Kertas</li>
+            <li class="list-group-item" style="background-color: #17202A; color: white; border-color: gray;">Bermain Game</li>
+            <li class="list-group-item" style="background-color: #17202A; color: white; border-color: gray;">Membuat Konten YouTube</li>
+          </ul>
+        </div>
+      </div>   
+    </div>
+    <br><br>
+  
+    <!-- portofolio saya -->
+    <br id="portofolio_saya">
+    <h1 style="color: #17A589; text-align: center; margin-top: 80px;">Portofolio Saya</h1>
+    <br>
+    <!---animasi donat (Saya suka donat! Jika modeling donat di Blender sudah mainstream,
+      mengapa kita tidak membuat donat yang menggiurkan bertekstur waffle di ThreeJS?)-->
+    <script src="assets/donat.js"></script>
+  
+    <h2 style="color: white; text-align: center; margin-top: 80px;">3D Model</h2>
+    <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
+      Foto 3D Model makanan sushi dan dorayaki yang saya buat dengan menggunakan Blender 3D beserta 3D preview objek yang saya ekspor ke ThreeJS. 
+      Untuk tekstur dan detail objek sengaja saya downgrade agar tidak terlalu berat.
+  </p>
+  <p style="color: gray; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
+      Klik dan drag mouse untuk mengubah view tampilan 3D model sushi dan dorayaki. Scroll mouse untuk zoom in dan zoom out
+  </p>
+  <br>
+  <!--gambar sushi dan dorayaki -->
+  <img src="https://i.postimg.cc/HsC0gxjP/IMG-20210622-060227.jpg" style="width: 370px; height: 270px;" class="mx-auto d-block" alt="...">
+  <!--preview 3d model sushi dan dorayaki-->
+  <script src="assets/dorayaki.js"></script>
+
+    <br>
+    <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
+        Foto-foto 3D Model lainnya yang saya buat dengan menggunakan aplikasi Blender 3D
+    </p>
+    <br>
+    <!--carousel-->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://i.postimg.cc/sg0Rzznx/deso-low-poly-1.png" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/G3DPVY3y/IMG-20210622-055836.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/bvRc3476/IMG-20210622-055926.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+    
+    <!--isometric scene 3D with threeJS-->
+    <br>
+    <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
+        Dan berikut adalah preview scene 3D isometric low poly yang saya buat dengan menggunakan threeJS. Hasilnya tidak bisa sebagus menggunakan Blender karena jujur saya masih belajar tentang threeJS dan juga sedikit kesulitan pada awal belajar.
+    </p>
+    <p style="color: gray; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
+        Klik dan drag mouse untuk mengubah view tampilan. Scroll mouse untuk zoom in dan zoom out
+    </p>
+    <script src="assets/palangKereta.js"></script>
+  
+    <h2 style="color: white; text-align: center; margin-top: 80px;">Desain Grafis dan Vektor</h2>
+    <br>
+    <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
+        Desain logo minuman boba dengan preview kemasan cup.
+    </p>
+    <p style="color: gray; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
+        Klik dan drag mouse untuk mengubah view tampilan 3D cup minuman boba. Scroll mouse untuk zoom in dan zoom out
+    </p>
+    <br>
+    <!--gambar de bonang boba nangka-->
+    <img src="https://i.postimg.cc/BbGvF7wc/de-bonang-dark.png" style="width: 270px; height: 270px;" class="rounded mx-auto d-block" alt="...">
+    <!--preview cup dengan desain kemasan-->
+    <script>
+      const scene3 = new THREE.Scene();
+      const camera3 = new THREE.PerspectiveCamera( 45, width / height, 1, 1000 );
+      scene3.add( camera3 );
+
+      //atur posisi kamera
+      camera3.position.z = 5;
+
+      const renderer3 = new THREE.WebGLRenderer({ alpha: true }); //alpha true = background transparan
+
+      renderer3.setSize(width, height);
+      document.body.appendChild(renderer3.domElement);
+      
+      //deklarasikan light
+      const lampu1_scene3 = new THREE.PointLight(0xffffff, 1);
+      lampu1_scene3.position.set(-2,-10,10);
+      scene3.add(lampu1_scene3);
+
+      const lampu2_scene3 = new THREE.PointLight(0xffffff, 1);
+      lampu2_scene3.position.set(10,3,10);
+      scene3.add(lampu2_scene3);
+
+      const lampu3_scene3 = new THREE.PointLight(0xffffff, 1);
+      lampu3_scene3.position.set(2,1,-10);
+      scene3.add(lampu3_scene3);
+
+      //deklarasikan geometri
+
+      //deklarasikan material
+
+      //deklarasikan mesh/objek
+
+      window.addEventListener('resize', function() {
+          renderer3.setSize(width, height);
+          camera3.aspect = width / height;
+          camera3.updateProjectionMatrix();
+      });
+
+      function update3() {
+          requestAnimationFrame(update3);
+          renderer3.render(scene3, camera3);
+      }
+
+      update3();
+  </script>
+    <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
+        Karya desain grafis vektor saya lainnya yang saya buat dengan menggunakan aplikasi Inkscape
+    </p>
+    <!--carousel-->
+    <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://i.postimg.cc/tgZRMGKN/vendorlabs-all.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/ydQNrDMr/satenesia-menu-design-revisi1.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/jSS7xJTv/kumakira-art-logo-profile-new-font.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/wxDJ0pF5/kemasan-krecek-new.png" style="width: 600px; height:500px; margin-left: 28%; margin-right: 25%;" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/1t9Vfnhv/desain-pribadi-hari-pahlawan-2020.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <br>
+  
+    <h2 style="color: white; text-align: center; margin-top: 80px;">Gambar Digital</h2>
+    <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
+        Lukisan digital yang saya buat dengan aplikasi Ibis Paint X
+    </p>
+    <!--carousel-->
+    <div id="carouselExampleControls3" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://i.postimg.cc/yNWV2Qv7/barongan-boy-1.png" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/6qcL2pRV/bahan-lomba-wacom-1.png" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/fRm7mCxT/barongan-girl-2-20210514095210.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <br>
+  
+    <h2 style="color: white; text-align: center; margin-top: 80px;">Wayang Kertas</h2>
+    <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
+        Wayang kertas yang saya buat sebagai hobi untuk mengisi waktu luang dan juga sebagai mainan bersama adik
+    </p>
+    <!--carousel-->
+    <div id="carouselExampleControls4" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://i.postimg.cc/fT7VDPZs/IMG-20210622-055002.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/MH5Jr1kC/IMG-20210622-055023.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/Kzm9pwZY/IMG-20210622-055202.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/jj1Q0jYC/IMG-20210622-055420.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/tg7xDz6x/IMG-20210414-090238.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls4" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls4" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <br><br>
+
+    <!-- youtube video -->
+    <br  id="yutub">
+    <h1 style="color: #17A589; text-align: center; margin-top: 80px;">Video YouTube Saya</h1>
+    <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
+        Beberapa video channel saya yaitu Green Fukurou Channel yang membahas tentang tutorial dan timelapse animasi serta 3D modeling
+    </p>
+    <br>
+
+    <!--video grid-->
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <iframe width="500" height="300"
+          src="https://www.youtube.com/embed/4WjYkRSK-qw">
+          </iframe>
+        </div>
+
+        <div class="col-6">
+          <iframe width="500" height="300"
+          src="https://www.youtube.com/embed/Y9TMTeIlX_w">
+          </iframe>
+        </div>
+        
+      </div>
+
+      <br><br>
+
+      <div class="row">
+        <div class="col-6">
+          <iframe width="500" height="300"
+          src="https://www.youtube.com/embed/Dyi7xzrCsaw">
+          </iframe>
+        </div>
+
+        <div class="col-6">
+          <iframe width="500" height="300"
+          src="https://www.youtube.com/embed/MLhLfZ2YxdE">
+          </iframe>
+        </div>
+        
+      </div>
+      
+      <br><br>
+
+      <div class="row">
+        <div class="col-6">
+          <iframe width="500" height="300"
+          src="https://www.youtube.com/embed/eoRlIy9r2lQ">
+          </iframe>
+        </div>
+
+        <div class="col-6">
+          <iframe width="500" height="300"
+          src="https://www.youtube.com/embed/0zNf5XiB85E">
+          </iframe>
+        </div>
+       
+      </div>
+        
+      <br><br>
+
+      <div class="row">
+        <div class="col-6">
+          <iframe width="500" height="300"
+                  src="https://www.youtube.com/embed/8TzVfZiOt_M">
+          </iframe>
+        </div>
+
+        <div class="col-6">
+          <iframe width="500" height="300"
+                  src="https://www.youtube.com/embed/Rb4yscTd6JQ">
+          </iframe>
+        </div>
+        
+      </div>
+
+    </div>
+  
+    <br><br><br>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="text-center" style="color: white;">&copy; 2021</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<style>
+    /* css internal */
+    body{
+        background: #17202A;
+    }
+
+    .sosmed{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    }
+
+    .sosmed a{
+        color: #f2f2f2;
+        width: 56px;
+        font-size: 22px;
+        transition: .3s linear;
+        text-decoration: none;
+    }
+
+    .sosmed a:hover{
+        color: #25cf96;
+    }
+
+</style>
+
+</html>
