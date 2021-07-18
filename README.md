@@ -1,7 +1,7 @@
 # threejs-landingPage
 
 > _"3D is the way we experience life"_
-> - _Alejandro González Iñárritu_
+> - _Alejandro González Iñárritu, Mexican Director_
 <br>
 
 ## Description
