@@ -2,6 +2,7 @@
 
 > _"3D is the way we experience life"_
 > - _Alejandro González Iñárritu_
+<br>
 
 ## Description
 My coursework about landing page using [![HTML](https://img.shields.io/badge/html-%205%20%20%20-red)](https://img.shields.io/badge/html-%205%20%20%20-red) ,
@@ -17,7 +18,6 @@ Created for the purposes of Computer Graphics course assignments.
 Website preview on Netlify:
 <br>
 https://dendykrisna-landingpage.netlify.app/
-<br>
 <br>
 ## Notes
 <br>
