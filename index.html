@@ -24,13 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/anijs-min.js" integrity="sha512-F/e65ZqVgVghvi8+r9UsfxC9Ew1dGjLcj5PfFFVtUNFoHQ05w10cg8eHsPC4RJJ5yCjPLW7+ChUramlE4NKHgA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/anijs.js" integrity="sha512-/Pfz7xHAu5QRu9e+ETG10JyfzsCuIw3SZdWVJl3DR4imeMJMrK3vOwHTWvCIE7pO6j0zGa5nRv5aBXKN8UqXnw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/event_systems/jquery/anijs-jquery-event-system-min.js" integrity="sha512-KDmPWkHAayAcFi65iJaTLxGVNZH9u6kw84kS7d6vswHB2PDTKfwQKXHpY6PDktMds4r/FmQwkaBsc82+gsqdYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/event_systems/jquery/anijs-jquery-event-system.js" integrity="sha512-SY2kL5Fcqx1Dq7p0Val8OXjpIh661CudOe76/vdOMnZ9WlPBM8+mOFUQP93evyFxxTlvGLQo6D09qm9hS6fW+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
-    <!-- AniCollection.css library -->
-    <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
-
     <!--three js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js" integrity="sha512-tjnAmVGiveGgWkDgt8h8oqmOl3cnmQkTNUIFK2BjMz0SliBCm9l0ecN1fHiOG2mATHSYm/miXNX6tE0/5uYKMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -71,27 +65,20 @@
     <br>
 
     <!--welcome-->
-    <h1 class="header_welcome animate__animated animate__jackInTheBox animate__fast animate__delay-1s">
+    <h1 class="header_welcome animate__animated animate__jackInTheBox animate__fast animate__delay-1s" data-anijs="if: mouseover, do: wobble animated">
       Welcome in My Site!
     </h1>
-    <p class="subtitle animate__animated animate__backInDown animate__faster animate__delay-2s">
+    <p class="subtitle animate__animated animate__backInDown animate__faster animate__delay-2s" data-anijs="if: mouseover, do: wobble animated">
       Website about my personal profile. Built with HTML, CSS, and Javascript
     </p>
-    
-    <!-- aniJS interactive animation untuk title header dan subtitle -->
-    <div data-anijs="if: mouseover, on: .header_welcome, do: wobble, to: .header_welcome"></div>
-    <div data-anijs="if: mouseover, on: .subtitle, do: wobble, to: .subtitle"></div>
     
     <!-- kubus di dalam sangkar -->
     <script src="assets/sangkar.js"></script>
   
     <!-- about me -->
     <br id="about-me">
-    <h2 class="content_title">Tentang Saya</h1>
+    <h2 class="content_title" data-anijs="if: mouseover, do: wobble animated">Tentang Saya</h1>
     <br>
-    
-    <!-- aniJS interactive animation untuk semua class content_title -->
-    <div data-anijs="if: mouseover, on: .content_title, do: wobble, to: .content_title"></div>
     
     <!--grid-->
     <div class="container">
@@ -151,7 +138,7 @@
 
     <!-- skill saya -->
     <br id="skill_saya">
-    <h1 class="content_title">Skill dan Hobi</h1>
+    <h1 class="content_title" data-anijs="if: mouseover, do: wobble animated">Skill dan Hobi</h1>
     <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
       Keahlian yang saya kuasai serta hal-hal apa yang biasanya saya lakukan di waktu senggang
     </p>
@@ -182,7 +169,7 @@
   
     <!-- portofolio saya -->
     <br id="portofolio_saya">
-    <h1 class="content_title">Portofolio</h1>
+    <h1 class="content_title" data-anijs="if: mouseover, do: wobble animated">Portofolio</h1>
     <br>
     <!---animasi donat (Saya suka donat! Jika modeling donat di Blender sudah mainstream,
       mengapa kita tidak membuat donat yang menggiurkan bertekstur waffle di ThreeJS?)-->
@@ -363,7 +350,7 @@
 
     <!-- youtube video -->
     <br  id="yutub">
-    <h1 class="content_title">My YouTube Video</h1>
+    <h1 class="content_title" data-anijs="if: mouseover, do: wobble animated">My YouTube Video</h1>
     <p style="color: white; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 10px;">
         Beberapa video channel saya yaitu Green Fukurou Channel yang membahas tentang tutorial dan timelapse animasi serta 3D modeling
     </p>
