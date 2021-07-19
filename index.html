@@ -15,9 +15,21 @@
     <!-- CSS Eksternal -->
     <link rel="stylesheet" href="assets/style.css">
 
-    <!-- Animate.css -->
-    <!-- saya menggunakan animate css untuk menganimasikan judul halaman. Referensi: https://animate.style/-->
+    <!-- Animate.css dan AniJS -->
+    <!-- saya menggunakan animate css dan anijs untuk menganimasikan judul halaman.
+    Referensi:
+    https://animate.style/
+    https://anijs.github.io/
+    -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/anijs-min.js" integrity="sha512-F/e65ZqVgVghvi8+r9UsfxC9Ew1dGjLcj5PfFFVtUNFoHQ05w10cg8eHsPC4RJJ5yCjPLW7+ChUramlE4NKHgA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/anijs.js" integrity="sha512-/Pfz7xHAu5QRu9e+ETG10JyfzsCuIw3SZdWVJl3DR4imeMJMrK3vOwHTWvCIE7pO6j0zGa5nRv5aBXKN8UqXnw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/event_systems/jquery/anijs-jquery-event-system-min.js" integrity="sha512-KDmPWkHAayAcFi65iJaTLxGVNZH9u6kw84kS7d6vswHB2PDTKfwQKXHpY6PDktMds4r/FmQwkaBsc82+gsqdYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/event_systems/jquery/anijs-jquery-event-system.js" integrity="sha512-SY2kL5Fcqx1Dq7p0Val8OXjpIh661CudOe76/vdOMnZ9WlPBM8+mOFUQP93evyFxxTlvGLQo6D09qm9hS6fW+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- AniCollection.css library -->
+    <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
 
     <!--three js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -65,6 +77,11 @@
     <p class="subtitle animate__animated animate__backInDown animate__faster animate__delay-2s">
       Website about my personal profile. Built with HTML, CSS, and Javascript
     </p>
+    
+    <!-- aniJS interactive animation untuk title header dan subtitle -->
+    <div data-anijs="if: mouseover, on: .header_welcome, do: wobble, to: .header_welcome"></div>
+    <div data-anijs="if: mouseover, on: .subtitle, do: wobble, to: .subtitle"></div>
+    
     <!-- kubus di dalam sangkar -->
     <script src="assets/sangkar.js"></script>
   
@@ -72,6 +89,9 @@
     <br id="about-me">
     <h2 class="content_title">Tentang Saya</h1>
     <br>
+    
+    <!-- aniJS interactive animation untuk semua class content_title -->
+    <div data-anijs="if: mouseover, on: .content_title, do: wobble, to: .content_title"></div>
     
     <!--grid-->
     <div class="container">
