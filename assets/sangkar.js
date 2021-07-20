@@ -49,6 +49,7 @@ const materialSarang = new THREE.MeshLambertMaterial(
         emissive: '#17A589',
         emissiveIntensity: 0.2,
         wireframe:true, //objek hanya akan ditampilkan wireframe/kerangkanya saja
+        side: THREE.DoubleSide,
     }
 );
 
