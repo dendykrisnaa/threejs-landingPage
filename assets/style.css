@@ -47,6 +47,14 @@ margin: 20px 0;
     letter-spacing: 5px;
 }
 
+.content_title:hover{
+    animation-name: heartBeat;
+    /* nama animasi berasal dari Animate.css.
+    Dan catatan: agar animasi berjalan, maka class animate__animated harus ditambahkan pada element
+    Referensi: https://stackoverflow.com/questions/46140852/adding-animate-css-on-hover
+    */
+}
+
 .portofolio_content_title{
     color: white;
     text-align: center;
