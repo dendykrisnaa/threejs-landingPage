@@ -11,6 +11,9 @@ const renderer4 = new THREE.WebGLRenderer({ alpha: true }); //alpha true = backg
 renderer4.setSize(width, height);
 document.body.appendChild(renderer4.domElement);
 
+//mengambil paragraf yang ber-id loadingProgress
+const checkProgress = document.getElementById("loadingProgress");
+
 //orbit controls
 /* awalnya sempat mencoba tidak menggunakan orbit controls, namun entah kenapa setelah dibuka lagi view tampilan kameranya
 nge-glitch. Dan setelah diberi orbit controls view kameranya menjadi normal kembali.
@@ -29,18 +32,32 @@ scene4.add(lampu2_scene4);
 const loader = new THREE.GLTFLoader();
 
 loader.load('.//assets/dorayaki.gltf', function (gltf) {
-    const makanan = gltf.scene;
-    scene4.add(makanan);
+        const makanan = gltf.scene;
+        scene4.add(makanan);
 
-    /* menganimasikan dorayaki, dikarenakan "makanan" tidak bisa dipanggil diluar fungsi, maka untuk animasi dorayaki tidak
-    ditempatkan pada function update */
-    function animation() {
-        makanan.rotation.y += 0.005;
-        requestAnimationFrame(animation);
+        /* menganimasikan dorayaki, dikarenakan "makanan" tidak bisa dipanggil diluar fungsi, maka untuk animasi dorayaki tidak
+        ditempatkan pada function update */
+        function animation() {
+            makanan.rotation.y += 0.005;
+            requestAnimationFrame(animation);
+        }
+
+        animation();
+    },
+
+    //menampilkan progress load objek
+    function ( xhr ) {
+        const loadStatus = xhr.loaded / xhr.total * 100;
+
+        //menampilkan progress load 3d model pada console
+        console.log('Loaded: ' + loadStatus + '%');
+
+        //menampilkan progress load 3d model pada html
+        checkProgress.innerHTML = "Loading 3D Model: " + loadStatus + "%, tunggu hingga sepiring sushi dan dorayaki siap disajikan";
+        checkProgress.style.fontWeight = "bold"; //menampilkan tulisan tebal
+
     }
-
-    animation();
-});
+);
 
 //gridHelper untuk menampilkan lantai grid ala aplikasi 3D
 const gridSize = 50;
