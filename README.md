@@ -18,9 +18,3 @@ Created for the purposes of Computer Graphics course assignments.
 Website preview on Netlify: https://dendykrisna-landingpage.netlify.app/
 <br>
 Deploy Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/09878164-9da7-4aa7-9610-cf2fe2d4b243/deploy-status)](https://app.netlify.com/sites/dendykrisna-landingpage/deploys)
-
-## Notes
-<br>
-Pada Netlify, objek 3D dorayaki tidak muncul. Namun sebenarnya objek dorayakinya akan muncul hanya saja membutuhkan sedikit waktu untuk meload objek.
-<br>
-(On Netlify, dorayaki 3D objects do not appear. But actually the dorayaki object will appear it just takes a little time to load the object.)
