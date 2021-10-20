@@ -33,6 +33,7 @@ var manager = new THREE.LoadingManager();
 
 manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
     progressElement.style.width = (itemsLoaded / itemsTotal * 100) + '%';
+    console.log('Loaded: '+ progressElement);
 };
 
 /*function ( xhr ) {
