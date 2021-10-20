@@ -30,6 +30,7 @@ scene4.add(lampu2_scene4);
 
 //import dari dorayaki.gltf
 const loader = new THREE.GLTFLoader();
+const manager = new THREE.LoadingManager( loader );
 
 loader.load('.//assets/dorayaki.gltf', function (gltf) {
         const makanan = gltf.scene;
@@ -46,17 +47,24 @@ loader.load('.//assets/dorayaki.gltf', function (gltf) {
     },
 
     //menampilkan progress load objek
-    function ( xhr ) {
-        const loadStatus = xhr.loaded / xhr.total * 100;
+    manager.onProgress = function ( item, loaded, total ) {
+            console.log( item, loaded, total );
+    }        
+    
+    function onProgress( xhr ) {
+        if ( xhr.lengthComputable ) {
+                const loadStatus = xhr.loaded / xhr.total * 100;
+                
+                //menampilkan progress load 3d model pada console
+                console.log('Loaded: ' + Math.round( loadStatus, 2 ) + '%');
 
-        //menampilkan progress load 3d model pada console
-        console.log('Loaded: ' + loadStatus + '%');
-
-        //menampilkan progress load 3d model pada html
-        checkProgress.innerHTML = "Loading 3D Model: " + loadStatus + "%, tunggu hingga sepiring sushi dan dorayaki siap disajikan";
-        checkProgress.style.fontWeight = "bold"; //menampilkan tulisan tebal
-
+                //menampilkan progress load 3d model pada html
+                checkProgress.innerHTML = "Loading 3D Model: " + Math.round( loadStatus, 2 ) + "%, tunggu hingga sepiring sushi dan dorayaki siap disajikan";
+                checkProgress.style.fontWeight = "bold"; //menampilkan tulisan tebal
+        }
     }
+
+    function onError() {}
 );
 
 //gridHelper untuk menampilkan lantai grid ala aplikasi 3D
