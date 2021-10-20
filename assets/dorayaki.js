@@ -32,8 +32,14 @@ scene4.add(lampu2_scene4);
 var manager = new THREE.LoadingManager();
 
 manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
-    progressElement.style.width = (itemsLoaded / itemsTotal * 100) + '%';
-    console.log('Loaded: '+ progressElement);
+    var loadStatus = (itemsLoaded / itemsTotal * 100);
+    
+    //menampilkan progress load 3d model pada console
+    console.log('Loaded: ' + Math.round( loadStatus * 100 ) + '%');
+
+    //menampilkan progress load 3d model pada html
+    checkProgress.innerHTML = "Loading 3D Model: " + Math.round( loadStatus * 100) + "%, tunggu hingga sepiring sushi dan dorayaki siap disajikan";
+    checkProgress.style.fontWeight = "bold"; //menampilkan tulisan tebal
 };
 
 /*function ( xhr ) {
