@@ -90,10 +90,12 @@ sedotanCup.position.x = 0.35; //atur posisi sumbu x
 sedotanCup.position.y = 0.8; //atur posisi sumbu y
 
 //gridHelper untuk menampilkan lantai grid ala aplikasi 3D
+/*
 const gridHelper2 = new THREE.GridHelper( gridSize, gridDivisions );
 scene6.add( gridHelper2 );
 
 gridHelper2.position.y = -0.8;
+*/
 
 window.addEventListener('resize', function() {
 renderer6.setSize(width, height);
