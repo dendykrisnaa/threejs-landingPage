@@ -31,7 +31,7 @@ scene4.add(lampu2_scene4);
 //import dari dorayaki.gltf
 const loader = new THREE.GLTFLoader();
 
-loader.load('.//assets/dorayaki.gltf', onProgress, function (gltf) {
+loader.load('.//assets/dorayaki.gltf', function (gltf) {
         const makanan = gltf.scene;
         scene4.add(makanan);
 
