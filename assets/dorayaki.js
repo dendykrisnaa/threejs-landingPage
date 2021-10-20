@@ -47,6 +47,8 @@ loader.load('.//assets/dorayaki.gltf', function (gltf) {
 
     //menampilkan progress load objek
     function onProgress( xhr ) {
+        const xhr = new window.XMLHttpRequest();
+        
         if ( xhr.lengthComputable ) {
                 const loadStatus = xhr.loaded / xhr.total * 100;
                 
