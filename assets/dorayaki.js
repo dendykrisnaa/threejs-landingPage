@@ -62,6 +62,7 @@ loader.load('.//assets/dorayaki.gltf', function (gltf) {
 );
 
 //gridHelper untuk menampilkan lantai grid ala aplikasi 3D
+/*
 const gridSize = 50;
 const gridDivisions = 50;
 
@@ -69,6 +70,7 @@ const gridHelper1 = new THREE.GridHelper( gridSize, gridDivisions );
 scene4.add( gridHelper1 );
 
 gridHelper1.position.y = -0.3;
+*/
 
 window.addEventListener('resize', function() {
     renderer4.setSize(width, height);
