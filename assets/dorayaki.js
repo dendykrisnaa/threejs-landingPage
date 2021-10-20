@@ -29,29 +29,19 @@ const lampu2_scene4 = new THREE.AmbientLight("#FFFFFF",0.5);
 scene4.add(lampu2_scene4);
 
 //menampilkan progress load objek
+//referensi : https://discourse.threejs.org/t/display-progress-bar-till-3d-model-gets-loaded-fully/699/4
 var manager = new THREE.LoadingManager();
 
 manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
     var loadStatus = (itemsLoaded / itemsTotal * 100);
     
     //menampilkan progress load 3d model pada console
-    console.log('Loaded: ' + Math.round( loadStatus * 100 ) + '%');
+    console.log('Loaded: ' + Math.round( loadStatus) + '%');
 
     //menampilkan progress load 3d model pada html
-    checkProgress.innerHTML = "Loading 3D Model: " + Math.round( loadStatus * 100) + "%, tunggu hingga sepiring sushi dan dorayaki siap disajikan";
+    checkProgress.innerHTML = "Loading 3D Model: " + Math.round( loadStatus) + "%, tunggu hingga sepiring sushi dan dorayaki siap disajikan";
     checkProgress.style.fontWeight = "bold"; //menampilkan tulisan tebal
 };
-
-/*function ( xhr ) {
-        const loadStatus = xhr.loaded / xhr.total;
-
-        //menampilkan progress load 3d model pada console
-        console.log('Loaded: ' + Math.round( loadStatus * 100 ) + '%');
-
-        //menampilkan progress load 3d model pada html
-        checkProgress.innerHTML = "Loading 3D Model: " + Math.round( loadStatus * 100) + "%, tunggu hingga sepiring sushi dan dorayaki siap disajikan";
-        checkProgress.style.fontWeight = "bold"; //menampilkan tulisan tebal
-}*/
 
 //import dari dorayaki.gltf
 var loader = new THREE.GLTFLoader(manager);
