@@ -29,7 +29,15 @@ const lampu2_scene4 = new THREE.AmbientLight("#FFFFFF",0.5);
 scene4.add(lampu2_scene4);
 
 //import dari dorayaki.gltf
-const manager = new THREE.LoadingManager();
+function loadModel() {
+        object.traverse( function ( child ) {
+                if ( child.isMesh ) child.material.map = texture;
+        } );
+        object.position.y = - 95;
+        scene.add( object );
+}
+
+const manager = new THREE.LoadingManager(loadModel);
 manager.onProgress = function ( item, loaded, total ) {
         console.log( item, loaded, total );
 };
