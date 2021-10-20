@@ -60,7 +60,6 @@ loader.load('.//assets/dorayaki.gltf', function (gltf) {
 
     //menampilkan progress load objek
     function onProgress( xhr ) {
-        if ( xhr.lengthComputable ) {
                 const loadStatus = xhr.loaded / xhr.total * 100;
                 
                 //menampilkan progress load 3d model pada console
@@ -69,7 +68,6 @@ loader.load('.//assets/dorayaki.gltf', function (gltf) {
                 //menampilkan progress load 3d model pada html
                 checkProgress.innerHTML = "Loading 3D Model: " + Math.round( loadStatus, 2 ) + "%, tunggu hingga sepiring sushi dan dorayaki siap disajikan";
                 checkProgress.style.fontWeight = "bold"; //menampilkan tulisan tebal
-        }
     },
 
     function onError() {}
