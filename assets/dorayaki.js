@@ -57,7 +57,7 @@ loader.load('.//assets/dorayaki.gltf', function (gltf) {
                 checkProgress.innerHTML = "Loading 3D Model: " + Math.round( loadStatus, 2 ) + "%, tunggu hingga sepiring sushi dan dorayaki siap disajikan";
                 checkProgress.style.fontWeight = "bold"; //menampilkan tulisan tebal
         }
-    }
+    },
 
     function onError() {}
 );
