@@ -49,7 +49,7 @@ loader.load('.//assets/dorayaki.gltf', function (gltf) {
     //menampilkan progress load objek
     manager.onProgress = function ( item, loaded, total ) {
             console.log( item, loaded, total );
-    };        
+    },        
     
     function onProgress( xhr ) {
         if ( xhr.lengthComputable ) {
