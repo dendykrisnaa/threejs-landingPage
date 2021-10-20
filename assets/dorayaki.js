@@ -29,7 +29,12 @@ const lampu2_scene4 = new THREE.AmbientLight("#FFFFFF",0.5);
 scene4.add(lampu2_scene4);
 
 //import dari dorayaki.gltf
-const loader = new THREE.GLTFLoader();
+const manager = new THREE.LoadingManager( loadModel );
+manager.onProgress = function ( item, loaded, total ) {
+        console.log( item, loaded, total );
+};
+
+const loader = new THREE.GLTFLoader(manager);
 
 loader.load('.//assets/dorayaki.gltf', function (gltf) {
         const makanan = gltf.scene;
