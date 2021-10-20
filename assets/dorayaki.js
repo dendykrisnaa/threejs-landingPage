@@ -31,7 +31,7 @@ scene4.add(lampu2_scene4);
 //import dari dorayaki.gltf
 const loader = new THREE.GLTFLoader();
 
-loader.load('.//assets/dorayaki.gltf', function (gltf) {
+loader.load('.//assets/dorayaki.gltf', onProgress, function (gltf) {
         const makanan = gltf.scene;
         scene4.add(makanan);
 
@@ -47,8 +47,6 @@ loader.load('.//assets/dorayaki.gltf', function (gltf) {
 
     //menampilkan progress load objek
     function onProgress( xhr ) {
-        const xhr = new window.XMLHttpRequest();
-        
         if ( xhr.lengthComputable ) {
                 const loadStatus = xhr.loaded / xhr.total * 100;
                 
