@@ -29,7 +29,7 @@ const lampu2_scene4 = new THREE.AmbientLight("#FFFFFF",0.5);
 scene4.add(lampu2_scene4);
 
 //import dari dorayaki.gltf
-const manager = new THREE.LoadingManager( loadModel );
+const manager = new THREE.LoadingManager();
 manager.onProgress = function ( item, loaded, total ) {
         console.log( item, loaded, total );
 };
