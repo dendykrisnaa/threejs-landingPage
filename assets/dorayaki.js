@@ -46,26 +46,16 @@ loader.load('.//assets/dorayaki.gltf', function (gltf) {
     },
 
     //menampilkan progress load objek
-    xhr: function(){
-        var xhr = new window.XMLHttpRequest();
-        
-        //Upload progress
-        xhr.upload.addEventListener("progress", function(evt){
-                if (evt.lengthComputable) {
-                        const loadStatus = xhr.loaded / xhr.total;
+    function ( xhr ) {
+        const loadStatus = xhr.loaded / xhr.total;
 
-                        //menampilkan progress load 3d model pada console
-                        console.log('Loaded: ' + Math.round( loadStatus * 100 ) + '%');
+        //menampilkan progress load 3d model pada console
+        console.log('Loaded: ' + Math.round( loadStatus * 100 ) + '%');
 
-                        //menampilkan progress load 3d model pada html
-                        checkProgress.innerHTML = "Loading 3D Model: " + Math.round( loadStatus * 100) + "%, tunggu hingga sepiring sushi dan dorayaki siap disajikan";
-                        checkProgress.style.fontWeight = "bold"; //menampilkan tulisan tebal
-                }
-        }, false);
-        return xhr;
-    type: 'POST',
-
-    function onError() {}
+        //menampilkan progress load 3d model pada html
+        checkProgress.innerHTML = "Loading 3D Model: " + Math.round( loadStatus * 100) + "%, tunggu hingga sepiring sushi dan dorayaki siap disajikan";
+        checkProgress.style.fontWeight = "bold"; //menampilkan tulisan tebal
+    }
 );
 
 //gridHelper untuk menampilkan lantai grid ala aplikasi 3D
