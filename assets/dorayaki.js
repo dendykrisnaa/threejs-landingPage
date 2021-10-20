@@ -28,8 +28,26 @@ lampu1_scene4.position.y = 2;
 const lampu2_scene4 = new THREE.AmbientLight("#FFFFFF",0.5);
 scene4.add(lampu2_scene4);
 
+//menampilkan progress load objek
+var manager = new THREE.LoadingManager();
+
+manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
+    progressElement.style.width = (itemsLoaded / itemsTotal * 100) + '%';
+};
+
+/*function ( xhr ) {
+        const loadStatus = xhr.loaded / xhr.total;
+
+        //menampilkan progress load 3d model pada console
+        console.log('Loaded: ' + Math.round( loadStatus * 100 ) + '%');
+
+        //menampilkan progress load 3d model pada html
+        checkProgress.innerHTML = "Loading 3D Model: " + Math.round( loadStatus * 100) + "%, tunggu hingga sepiring sushi dan dorayaki siap disajikan";
+        checkProgress.style.fontWeight = "bold"; //menampilkan tulisan tebal
+}*/
+
 //import dari dorayaki.gltf
-const loader = new THREE.GLTFLoader();
+var loader = new THREE.GLTFLoader(manager);
 
 loader.load('.//assets/dorayaki.gltf', function (gltf) {
         const makanan = gltf.scene;
@@ -43,18 +61,6 @@ loader.load('.//assets/dorayaki.gltf', function (gltf) {
         }
 
         animation();
-    },
-
-    //menampilkan progress load objek
-    function ( xhr ) {
-        const loadStatus = xhr.loaded / xhr.total;
-
-        //menampilkan progress load 3d model pada console
-        console.log('Loaded: ' + Math.round( loadStatus * 100 ) + '%');
-
-        //menampilkan progress load 3d model pada html
-        checkProgress.innerHTML = "Loading 3D Model: " + Math.round( loadStatus * 100) + "%, tunggu hingga sepiring sushi dan dorayaki siap disajikan";
-        checkProgress.style.fontWeight = "bold"; //menampilkan tulisan tebal
     }
 );
 
