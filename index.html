@@ -7,8 +7,9 @@
     <title>Dendy Krisna Ananda's Blog</title>
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
     <!--fontawesome icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   
@@ -35,21 +36,36 @@
 
 <!-- konten -->
 
-    <!-- navigation bar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark animate__animated animate__slideInDown animate__delay-3s" style="background-color: #17202A;">
+    <!-- navigation bar, referensi: https://www.codeply.com/p/7plDNvBJnB-->
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg animate__animated animate__slideInDown animate__delay-3s" style="background-color: #17202A;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-              <i class="fas fa-cube" style="color: #17A589; margin-right: 5px;"></i>
-              <strong>Dendy Krisna</strong>'s Blog
+              <strong style="color: #17A589; margin-left: 30px;">DENDY KRISNA'S BLOG</strong>
             </a>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                <div class="navbar-nav" style="font-weight: 600;">
-                <a class="nav-link" aria-current="page" href="#">Beranda</a>
-                <a class="nav-link" href="#about-me">Tentang Saya</a>
-                <a class="nav-link" href="#skill_saya">Skill dan Hobi</a>
-                <a class="nav-link" href="#portofolio_saya">Portofolio</a>
-                <a class="nav-link" href="#yutub">My YouTube Video</a>
-                </div>
+            
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse_Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse justify-content-end" id="collapse_Navbar">
+                <ul class="navbar-nav" style="font-weight: 600;">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#" style="margin-left: 30px;">Beranda</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about-me" style="margin-left: 30px;">Tentang Saya</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#skill_saya" style="margin-left: 30px;">Skill dan Hobi</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#portofolio_saya" style="margin-left: 30px;">Portofolio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#yutub" style="margin-left: 30px; margin-right: 30px;">
+                      My YouTube Video</a>
+                  </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -198,12 +214,99 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="https://i.postimg.cc/sg0Rzznx/deso-low-poly-1.png" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>3D Low Poly Scene Rumah Desa</p>
+          </div>
         </div>
         <div class="carousel-item">
           <img src="https://i.postimg.cc/G3DPVY3y/IMG-20210622-055836.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>3D Illustration Lord Shiv (Dewa Siwa) and Nandi</p>
+          </div>
         </div>
         <div class="carousel-item">
-          <img src="https://i.postimg.cc/bvRc3476/IMG-20210622-055926.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <img src="https://i.postimg.cc/c15Xj7Zq/fanart-mechabot.png" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>3D Fanart Mechabot from Mechamato</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/V6mVfzZ3/barong-bangkung.png" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>3D Model Barong Bangkung (Barong Bangkal)</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/wBy6XQ66/zero_one_depan_belakang.png" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>3D Fanart Kamen Rider Zero One Rising Hoppper</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/1zQktkW1/progrise-key.png" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>3D Model Zero One Rising Hopper Progrise Key</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/nhmRqX6y/gaim-lockseed.png" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>3D Model Kamen Rider Gaim Orange Lockseed</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/kgD9CvRx/dc-motor.png" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>3D Model DC Motor Arduino</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/Vs43Nb84/joystick-shield.png" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>3D Model Joystick Shield Arduino</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/ZRPVz3Lr/mockup-kemasan-mie-nyonyor-3d-render.png" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>3D Mockup Kemasan Kotak Mie Nyonyor C'Luluk</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/J4WtHDZB/3d-mockup-sale-pisang-pouch-2.png" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>3D Mockup Kemasan Pouch Sale Pisang</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/brW8XKgD/stand-boba-tampak-atas.png" style="width: 600px; height: 600px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>3D Model Stand Boba (tampak samping depan)</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/tCnpd4Rh/stand-boba-tampak-belakang-perspective.png" style="width: 600px; height: 600px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>3D Model Stand Boba (tampak samping belakang)</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/8kr0tJWP/4-desain-eksterior-pura-3d.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>3D Scene Pura</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/x1S8czGk/low-poly-city.png" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>3D Scene Low Poly Kota</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/WzP693Lh/5-desain-interior-kamar-isometric.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>3D Scene Low Poly Kamar Isometric</p>
+          </div>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -253,18 +356,63 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="https://i.postimg.cc/tgZRMGKN/vendorlabs-all.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Logo Jasa Vendor Weeding Organizer Vendorlabs</p>
+          </div>
         </div>
         <div class="carousel-item">
-          <img src="https://i.postimg.cc/ydQNrDMr/satenesia-menu-design-revisi1.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <img src="https://i.postimg.cc/ydQNrDMr/satenesia-menu-design-revisi1.png" style="width: 600px; height: 600px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Brosur Satenesia</p>
+          </div>
         </div>
         <div class="carousel-item">
-          <img src="https://i.postimg.cc/jSS7xJTv/kumakira-art-logo-profile-new-font.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <img src="https://i.postimg.cc/jSS7xJTv/kumakira-art-logo-profile-new-font.png" style="width: 500px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Logo Kumakira Digital Art</p>
+          </div>
         </div>
         <div class="carousel-item">
           <img src="https://i.postimg.cc/wxDJ0pF5/kemasan-krecek-new.png" style="width: 600px; height:500px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Label Kemasan Krecek Rambak Sapi Aldean</p>
+          </div>
         </div>
         <div class="carousel-item">
           <img src="https://i.postimg.cc/1t9Vfnhv/desain-pribadi-hari-pahlawan-2020.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Pamflet Ucapan Hari Pahlawan Style Wayang</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/VkSKdktp/logo-mie-nyonyor-c-luluk.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Logo Mie Nyonyor C'Luluk</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/D0ygFvFC/packaging-kotak-mie-nyonyor-C-Luluk-200-dpi.png" style="width: 600px; height: 600px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Desain Kemasan Mie Nyonyor C'Luluk</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/Vs4dL5TF/brosur-mie-nyonyor-celuluk-ukuran-cetak-f4-revisi.png" style="width: 600px; height: 600px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Brosur Mie Nyonyor C'Luluk</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/2ySPCC90/kemasan-pouch-sale-pisang-rev.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Desain Kemasan Pouch Sale Pisang</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/MZfbXvgV/infografis-ss-colapse.png" style="width: 600px; height: 600px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Desain Infografis</p>
+          </div>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
@@ -287,13 +435,64 @@
     <div id="carouselExampleControls3" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://i.postimg.cc/yNWV2Qv7/barongan-boy-1.png" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <img src="https://i.postimg.cc/yNWV2Qv7/barongan-boy-1.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Digital Painting Anime Style Barongan Boy</p>
+          </div>
         </div>
         <div class="carousel-item">
-          <img src="https://i.postimg.cc/6qcL2pRV/bahan-lomba-wacom-1.png" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <img src="https://i.postimg.cc/6qcL2pRV/bahan-lomba-wacom-1.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Digital Painting Anime Style Luweng Pawon (Tungku Dapur)</p>
+          </div>
         </div>
         <div class="carousel-item">
-          <img src="https://i.postimg.cc/fRm7mCxT/barongan-girl-2-20210514095210.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <img src="https://i.postimg.cc/zGgfWxnC/Tak_berjudul40_20210514103222.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Digital Painting Anime Style Barongan Girl</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/RFzZHLDb/Tak_berjudul39_20210514101146.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Digital Painting Anime Style Barongan Girl Masked</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/1zKYP9w7/Trigger_Multi_Type_(Plus_Bayangan_Dark)_(2).pngg" style="width: 600px; height: 600px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Digital Painting Fanart Ultraman Trigger Versi Wayang</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/sXvP8ych/Fanart_yuzare_(trigger).png" style="width: 600px; height: 600px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Digital Painting Fanart Yuzare Versi Wayang</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/vHQJsB7s/Carmearra_(Karmila)_Ultraman_Trigger_(1).png" style="width: 600px; height: 600px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Digital Painting Fanart Dark Giant Karmila Versi Wayang</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/cHsMcwKX/Darrgon_(Darramb_versi_Trigger).png" style="width: 600px; height: 600px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Digital Painting Fanart Dark Giant Darrgon (Darramb) Versi Wayang</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/ZRHkf8wR/Hudram_versi_wayang.png" style="width: 600px; height: 600px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Digital Painting Fanart Dark Giant Hudram Versi Wayang</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/kgG5W4XK/Tak_berjudul46_20210518142534.png" style="width: 600px; height: 500px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Digital Painting Avatar Saya Versi Chibi Anime</p>
+          </div>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="prev">
@@ -316,19 +515,58 @@
     <div id="carouselExampleControls4" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://i.postimg.cc/fT7VDPZs/IMG-20210622-055002.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <img src="https://i.postimg.cc/VvpW8Ngt/IMG_20211002_094136.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Wayang Kertas Buto (Raksasa), Werkudara (Bima) dan Antasena (Putra Werkudara, adik Antareja dan Gatotkaca) yang sudah disungging/diwarnai. Untuk warna memakai cat air akrilik</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/QxqQ8sbv/IMG_20211002_094125.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Wayang Kertas Werkudara dan Antasena yang sudah disungging. Untuk Antasena memakai gelung (ikat rambut yang melingkar) seperti Antasena gaya wayang Jogja</p>
+          </div>
         </div>
         <div class="carousel-item">
           <img src="https://i.postimg.cc/MH5Jr1kC/IMG-20210622-055023.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Wayang Kertas karakter Kancil putihan/belum diwarnai. Mengambil referensi dari wayang kulit kancil ciptaan Ki Ledjar Subroto.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/5t8NJ95C/IMG_20211004_120054.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Wayang Kertas karakter Kancil yang sudah disungging. Mengambil referensi dari wayang kulit kancil ciptaan Ki Ledjar Subroto.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/rwBF7R4T/IMG_20211004_120022.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Wayang Kertas karakter Kancil yang sudah disungging dari sisi lain. Mengambil referensi dari wayang kulit kancil ciptaan Ki Ledjar Subroto.</p>
+          </div>
         </div>
         <div class="carousel-item">
           <img src="https://i.postimg.cc/Kzm9pwZY/IMG-20210622-055202.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Wayang Kertas Kreasi Kamen Rider Black RX dan Belalang Tempur putihan</p>
+          </div>
         </div>
         <div class="carousel-item">
           <img src="https://i.postimg.cc/jj1Q0jYC/IMG-20210622-055420.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Wayang Kertas putihan Werkudara/Bima bertarung dengan Harimau gaya wayang Bali</p>
+          </div>
         </div>
         <div class="carousel-item">
           <img src="https://i.postimg.cc/tg7xDz6x/IMG-20210414-090238.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Saya dan kedua adik saya memainkan wayang kertas</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.postimg.cc/fT7VDPZs/IMG-20210622-055002.jpg" style="width: 600px; height: 400px; margin-left: 28%; margin-right: 25%;" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Kumpulan koleksi wayang kertas yang saya buat sendiri</p>
+          </div>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls4" data-bs-slide="prev">
@@ -438,7 +676,8 @@
           <div>
             <!-- WhatsApp -->
             <a
-              class="btn btn-success btn-link btn-floating btn-sm text-white m-1"
+              class="btn btn-success btn-link btn-floating btn-lg text-white m-1"
+              style="border-radius: 35px; width: 50px; height: 50px;"
               href="https://wa.me/6282334847545"
               data-mdb-ripple-color="dark"
               ><i class="fab fa-whatsapp"></i
@@ -446,7 +685,8 @@
   
             <!-- Facebook -->
             <a
-              class="btn btn-success btn-link btn-floating btn-sm text-white m-1"
+              class="btn btn-success btn-link btn-floating btn-lg text-white m-1"
+              style="border-radius: 35px; width: 50px; height: 50px;"
               href="https://www.facebook.com/dendykrisna.ananda"
               data-mdb-ripple-color="dark"
               role="button"
@@ -455,7 +695,8 @@
       
             <!-- Instagram -->
             <a
-              class="btn btn-success btn-link btn-floating btn-sm text-white m-1"
+              class="btn btn-success btn-link btn-floating btn-lg text-white m-1"
+              style="border-radius: 35px; width: 50px; height: 50px;"
               href="https://www.instagram.com/dendykrisnaa/"
               data-mdb-ripple-color="dark"
               ><i class="fab fa-instagram"></i
@@ -463,7 +704,8 @@
       
             <!-- YouTube -->
             <a
-              class="btn btn-success btn-link btn-floating btn-sm text-white m-1"
+              class="btn btn-success btn-link btn-floating btn-lg text-white m-1"
+              style="border-radius: 35px; width: 50px; height: 50px;"
               href="https://www.youtube.com/channel/UCBI2GMdf-G3Bt7jzHdTFdyg"
               data-mdb-ripple-color="dark"
               ><i class="fab fa-youtube"></i
@@ -471,14 +713,16 @@
             
             <!-- CodePen -->
             <a
-              class="btn btn-success btn-link btn-floating btn-sm text-white m-1"
+              class="btn btn-success btn-link btn-floating btn-lg text-white m-1"
+              style="border-radius: 35px; width: 50px; height: 50px;"
               href="https://codepen.io/krisnasatoru_mikami"
               data-mdb-ripple-color="dark"
               ><i class="fab fa-codepen"></i
             ></a>
             <!-- Github -->
             <a
-              class="btn btn-success btn-link btn-floating btn-sm text-white m-1"
+              class="btn btn-success btn-link btn-floating btn-lg text-white m-1"
+              style="border-radius: 35px; width: 50px; height: 50px;"
               href="https://github.com/dendykrisnaa"
               data-mdb-ripple-color="dark"
               ><i class="fab fa-github"></i
